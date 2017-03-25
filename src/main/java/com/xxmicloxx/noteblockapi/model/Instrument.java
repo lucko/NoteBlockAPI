@@ -1,11 +1,13 @@
-package com.xxmicloxx.NoteBlockAPI;
+package com.xxmicloxx.noteblockapi.model;
+
+import com.xxmicloxx.noteblockapi.NoteBlockPlugin;
 
 import org.bukkit.Sound;
 
 public class Instrument {
 
     public static Sound getInstrument(byte instrument) {
-    	if (!NoteBlockPlayerMain.plugin.isPre1_9()){
+    	if (!NoteBlockPlugin.isPre1_9()){
 	    	switch (instrument) {
 	            case 0:
 	                return Sound.valueOf("BLOCK_NOTE_HARP");

@@ -1,4 +1,4 @@
-package com.xxmicloxx.NoteBlockAPI;
+package com.xxmicloxx.noteblockapi.utils;
 
 import java.util.Arrays;
 

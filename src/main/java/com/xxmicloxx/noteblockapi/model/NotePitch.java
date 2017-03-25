@@ -1,5 +1,10 @@
-package com.xxmicloxx.NoteBlockAPI;
+package com.xxmicloxx.noteblockapi.model;
 
+import lombok.AllArgsConstructor;
+
+import com.xxmicloxx.noteblockapi.NoteBlockPlugin;
+
+@AllArgsConstructor
 public enum NotePitch {
 
 	NOTE_0(0, 0.5F, 0.50000F),
@@ -32,16 +37,10 @@ public enum NotePitch {
     public float pitchPre1_9;
     public float pitchPost1_9;
 
-    private NotePitch(int note, float pitchPre1_9, float pitchPost1_9) {
-        this.note = note;
-        this.pitchPre1_9 = pitchPre1_9;
-        this.pitchPost1_9 = pitchPost1_9;
-    }
-
     public static float getPitch(int note) {
         for (NotePitch notePitch : values()) {
             if (notePitch.note == note) {
-                return NoteBlockPlayerMain.plugin.isPre1_9() ? notePitch.pitchPre1_9 : notePitch.pitchPost1_9;
+                return NoteBlockPlugin.isPre1_9() ? notePitch.pitchPre1_9 : notePitch.pitchPost1_9;
             }
         }
 

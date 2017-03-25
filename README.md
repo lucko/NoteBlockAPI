@@ -1,4 +1,6 @@
 # NoteBlockAPI
-[![](https://jitpack.io/v/koca2000/NoteBlockAPI.svg)](https://jitpack.io/#koca2000/NoteBlockAPI)
+Re-structured / re-written with sane programming standards. Totally incompatible with plugins which depend on the original version of the plugin.
 
-For informations about this Spigot/Bukkit API go to https://www.spigotmc.org/resources/noteblockapi.19287/
+### Downloads / Maven Repo
+* [**Development Builds**](https://ci.lucko.me/job/NoteBlockAPI/)
+* [**Maven Repo**](https://nexus.lucko.me/)
