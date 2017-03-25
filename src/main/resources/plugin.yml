@@ -1,5 +1,5 @@
 name: NoteBlockAPI
-main: com.xxmicloxx.NoteBlockAPI.NoteBlockPlugin
+main: com.xxmicloxx.noteblockapi.NoteBlockPlugin
 version: ${project.version}
 description: A developer interface to play nbs files ingame
 authors: [xxmicloxx, michidk, koca2000, Luck]
