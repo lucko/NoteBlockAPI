@@ -70,8 +70,6 @@ public class NBSDecoder {
                 }
             }
             return new Song(speed, layerHashMap, songHeight, length, title, author, description, decodeFile);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -79,11 +77,7 @@ public class NBSDecoder {
     }
 
     private static void setNote(int layer, int ticks, byte instrument, byte key, HashMap<Integer, Layer> layerHashMap) {
-        Layer l = layerHashMap.get(layer);
-        if (l == null) {
-            l = new Layer();
-            layerHashMap.put(layer, l);
-        }
+        Layer l = layerHashMap.computeIfAbsent(layer, k -> new Layer());
         l.setNote(ticks, new Note(instrument, key));
     }
 

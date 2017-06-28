@@ -15,9 +15,6 @@ import java.util.Map;
 import java.util.UUID;
 
 public class NoteBlockPlugin extends JavaPlugin {
-    public static boolean isPre1_9() {
-        return Bukkit.getVersion().contains("1.8") || Bukkit.getVersion().contains("1.7");
-    }
 
     @Getter
     private Map<UUID, List<SongPlayer>> playingSongs = Collections.synchronizedMap(new HashMap<>());
