@@ -4,7 +4,12 @@ import com.xxmicloxx.noteblockapi.model.Layer;
 import com.xxmicloxx.noteblockapi.model.Note;
 import com.xxmicloxx.noteblockapi.model.Song;
 
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 
 public class NBSDecoder {

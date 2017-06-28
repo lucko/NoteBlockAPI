@@ -12,15 +12,16 @@ import org.bukkit.event.HandlerList;
 @Getter
 @AllArgsConstructor
 public class PlayerRangeStateChangeEvent extends Event {
-	private static final HandlerList HANDLERS = new HandlerList();
+    private static final HandlerList HANDLERS = new HandlerList();
+
     public static HandlerList getHandlerList() {
         return HANDLERS;
     }
 
-	private SongPlayer songPlayer;
-	private Player player;
-	private Boolean inRange;
-    
+    private SongPlayer songPlayer;
+    private Player player;
+    private Boolean inRange;
+
     @Override
     public HandlerList getHandlers() {
         return HANDLERS;

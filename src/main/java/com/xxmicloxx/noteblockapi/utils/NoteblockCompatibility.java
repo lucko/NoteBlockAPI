@@ -6,6 +6,7 @@ public enum NoteblockCompatibility {
     PRE_1_9, PRE_1_12, POST_1_12;
 
     private static NoteblockCompatibility cache = null;
+
     public static synchronized NoteblockCompatibility detect() {
         if (cache != null) {
             return cache;

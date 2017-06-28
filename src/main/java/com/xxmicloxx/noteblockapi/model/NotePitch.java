@@ -7,7 +7,7 @@ import com.xxmicloxx.noteblockapi.utils.NoteblockCompatibility;
 @AllArgsConstructor
 public enum NotePitch {
 
-	NOTE_0(0.5F, 0.50000F),
+    NOTE_0(0.5F, 0.50000F),
     NOTE_1(0.53F, 0.52973F),
     NOTE_2(0.56F, 0.56123F),
     NOTE_3(0.6F, 0.59461F),

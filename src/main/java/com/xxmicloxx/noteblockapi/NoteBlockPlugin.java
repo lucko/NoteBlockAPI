@@ -37,7 +37,7 @@ public class NoteBlockPlugin extends JavaPlugin {
         disabling = true;
         Bukkit.getScheduler().cancelTasks(this);
     }
-    
+
     public boolean isReceivingSong(Player p) {
         List<SongPlayer> songs = getPlayingSongs().get(p.getUniqueId());
         return songs != null && !songs.isEmpty();

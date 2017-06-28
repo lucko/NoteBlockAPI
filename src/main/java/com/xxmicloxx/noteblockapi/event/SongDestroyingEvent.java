@@ -14,6 +14,7 @@ import org.bukkit.event.HandlerList;
 @RequiredArgsConstructor
 public class SongDestroyingEvent extends Event implements Cancellable {
     private static final HandlerList HANDLERS = new HandlerList();
+
     public static HandlerList getHandlerList() {
         return HANDLERS;
     }

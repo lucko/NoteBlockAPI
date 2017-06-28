@@ -14,14 +14,14 @@ public abstract class RangedSongPlayer extends SongPlayer {
     }
 
     protected void recalculateRange(Player p) {
-        if (isPlayerInRange(p)){
-            if (!this.getPlayerList().get(p.getUniqueId())){
+        if (isPlayerInRange(p)) {
+            if (!this.getPlayerList().get(p.getUniqueId())) {
                 getPlayerList().put(p.getUniqueId(), true);
                 PlayerRangeStateChangeEvent event = new PlayerRangeStateChangeEvent(this, p, true);
                 Bukkit.getPluginManager().callEvent(event);
             }
         } else {
-            if (this.getPlayerList().get(p.getUniqueId())){
+            if (this.getPlayerList().get(p.getUniqueId())) {
                 getPlayerList().put(p.getUniqueId(), false);
                 PlayerRangeStateChangeEvent event = new PlayerRangeStateChangeEvent(this, p, false);
                 Bukkit.getPluginManager().callEvent(event);

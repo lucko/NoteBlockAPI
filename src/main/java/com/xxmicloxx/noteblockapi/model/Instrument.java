@@ -6,6 +6,7 @@ import org.bukkit.Sound;
 
 public class Instrument {
     private static final Sound[] LOOKUP = getLookup();
+
     private static Sound[] getLookup() {
         if (NoteblockCompatibility.detect() == NoteblockCompatibility.PRE_1_9) {
             return new Sound[]{

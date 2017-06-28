@@ -3,10 +3,10 @@ package com.xxmicloxx.noteblockapi.songplayer;
 import lombok.Getter;
 import lombok.Setter;
 
+import com.xxmicloxx.noteblockapi.NoteBlockPlugin;
 import com.xxmicloxx.noteblockapi.model.Instrument;
 import com.xxmicloxx.noteblockapi.model.Layer;
 import com.xxmicloxx.noteblockapi.model.Note;
-import com.xxmicloxx.noteblockapi.NoteBlockPlugin;
 import com.xxmicloxx.noteblockapi.model.NotePitch;
 import com.xxmicloxx.noteblockapi.model.Song;
 
@@ -47,7 +47,7 @@ public class NoteBlockSongPlayer extends RangedSongPlayer {
             p.playNote(noteBlock.getLocation(), Instrument.getBukkitInstrument(note.getInstrument()), new org.bukkit.Note(note.getKey() - 33));
             p.playSound(noteBlock.getLocation(),
                     Instrument.getInstrument(note.getInstrument()),
-                    ((l.getVolume() * (int) getVolume() * (int) playerVolume) / 1000000f) * ((1f/16f) * distance),
+                    ((l.getVolume() * (int) getVolume() * (int) playerVolume) / 1000000f) * ((1f / 16f) * distance),
                     NotePitch.getPitch(note.getKey() - 33)
             );
 
@@ -56,7 +56,7 @@ public class NoteBlockSongPlayer extends RangedSongPlayer {
     }
 
     @Override
-    public boolean isPlayerInRange(Player p){
+    public boolean isPlayerInRange(Player p) {
         return !(p.getLocation().distance(noteBlock.getLocation()) > distance);
     }
 }

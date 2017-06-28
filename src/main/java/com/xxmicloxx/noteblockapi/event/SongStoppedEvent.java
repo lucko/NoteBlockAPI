@@ -12,6 +12,7 @@ import org.bukkit.event.HandlerList;
 @AllArgsConstructor
 public class SongStoppedEvent extends Event {
     private static final HandlerList HANDLERS = new HandlerList();
+
     public static HandlerList getHandlerList() {
         return HANDLERS;
     }
